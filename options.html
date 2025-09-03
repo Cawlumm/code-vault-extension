@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Code Vault Options</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main class="wrap">
+    <h1>Code Vault – Options</h1>
+    <section class="card">
+        <div class="row">
+            <label>API Base URL</label>
+            <input id="apiBaseUrl" placeholder="https://api.mycodevault.com"/>
+        </div>
+        <div class="row">
+            <label>Login Path (optional)</label>
+            <input id="loginPathOverride" placeholder="/api/auth/login"/>
+        </div>
+        <div class="row">
+            <label>Default Tags (comma)</label>
+            <input id="tagDefaults" placeholder="web, snippet"/>
+        </div>
+        <button id="save">Save</button>
+        <span id="saved" class="muted"></span>
+    </section>
+</main>
+<script type="module" src="options.js"></script>
+</body>
+</html>

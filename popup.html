@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Code Vault</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main class="wrap">
+    <h1>Code Vault</h1>
+
+    <section class="card">
+        <h2>Authentication</h2>
+        <!-- Login Form -->
+        <div id="loginFields">
+            <div class="row">
+                <label>Email</label>
+                <input id="email" type="email" placeholder="you@domain.com"/>
+            </div>
+            <div class="row">
+                <label>Password</label>
+                <input id="password" type="password" placeholder="••••••••"/>
+            </div>
+            <button id="loginBtn" type="button">Log in</button>
+            <div class="toggle-text">
+                <a href="#" id="toggleRegister">Need an account? Register</a>
+            </div>
+        </div>
+
+        <!-- Register Form -->
+        <div id="registerFields" style="display: none;">
+            <div class="row">
+                <label>Email</label>
+                <input id="registerEmail" type="email" placeholder="you@domain.com"/>
+            </div>
+            <div class="row">
+                <label>Password</label>
+                <input id="registerPassword" type="password" placeholder="••••••••"/>
+            </div>
+            <div class="row">
+                <label>Confirm Password</label>
+                <input id="confirmPassword" type="password" placeholder="••••••••"/>
+            </div>
+            <button id="registerBtn" type="button">Register</button>
+            <div class="toggle-text">
+                <a href="#" id="toggleLogin">Already have an account? Login</a>
+            </div>
+        </div>
+        <div class="status-container">
+            <div id="loginStatus" class="muted"></div>
+            <div id="loginLoader" class="loader"></div>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>Quick Save</h2>
+        <div class="row">
+            <label>Title</label>
+            <input id="title" placeholder="Snippet title"/>
+        </div>
+        <div class="row">
+            <label>Language</label>
+            <input id="language" placeholder="e.g., javascript"/>
+        </div>
+        <div class="row">
+            <label>Tags (comma)</label>
+            <input id="tags" placeholder="e.g., array, util"/>
+        </div>
+        <div class="row">
+            <label>Content</label>
+            <textarea id="content" rows="6" placeholder="Paste your code here"></textarea>
+        </div>
+        <button id="saveBtn">Save to Vault</button>
+        <div class="status-container">
+            <div id="saveStatus" class="muted"></div>
+            <div id="saveLoader" class="loader"></div>
+        </div>
+    </section>
+
+    <!-- Add this section after the Quick Save card and before the links -->
+    <section class="card snippets-section">
+        <h2>Recent Snippets</h2>
+        <div id="snippetsList" class="snippets-list"></div>
+        <div id="snippetsLoader" class="loader centered-loader"></div>
+        <div id="snippetsStatus" class="muted centered-text"></div>
+    </section>
+
+    <div class="links">
+        <a id="openOptions" href="#">Options</a>
+        <button id="logoutBtn" class="linkish">Log out</button>
+    </div>
+</main>
+<script type="module" src="popup.js"></script>
+</body>
+</html>
